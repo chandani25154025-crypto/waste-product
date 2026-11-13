@@ -179,3 +179,21 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+ReLoop AI database and sensitive files
+
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+Secret configuration
+
+.env
+.env.*
+!.env.example
+
+Python virtual environment
+
+venv/
+.venv/
+pycache/
