@@ -1,0 +1,1070 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #f5f8f2;
+color: #20352a;
+line-height: 1.6;
+}
+
+header {
+background: #123d2b;
+color: white;
+padding: 20px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.logo {
+font-size: 26px;
+font-weight: bold;
+}
+
+.logo span {
+color: #9be477;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-size: 14px;
+}
+
+nav a:hover {
+color: #9be477;
+}
+
+.hero {
+min-height: 430px;
+padding: 65px 7%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 35px;
+flex-wrap: wrap;
+}
+
+.hero-content {
+flex: 1 1 320px;
+}
+
+.tag {
+display: inline-block;
+background: #dff4d4;
+color: #23653b;
+padding: 8px 15px;
+border-radius: 25px;
+margin-bottom: 18px;
+}
+
+.hero h1 {
+font-size: clamp(38px, 5vw, 58px);
+line-height: 1.15;
+margin-bottom: 20px;
+}
+
+.hero h1 span {
+color: #319451;
+}
+
+.hero-content > p:not(.tag) {
+color: #68766b;
+max-width: 480px;
+margin-bottom: 25px;
+}
+
+.button {
+display: inline-block;
+background: #248749;
+color: white;
+padding: 13px 22px;
+border: none;
+border-radius: 8px;
+text-decoration: none;
+font-size: 15px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.button:hover {
+background: #176334;
+transform: translateY(-2px);
+}
+
+.hero-art {
+flex: 1 1 260px;
+min-height: 260px;
+background: linear-gradient(135deg, #dff4d4, #b5e4ac);
+border-radius: 25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 25px;
+font-size: 75px;
+}
+
+.hero-art h2 {
+font-size: 20px;
+color: #245d36;
+margin-top: 15px;
+}
+
+.dashboard,
+.scanner,
+.features,
+.eco {
+padding: 55px 7%;
+text-align: center;
+}
+
+.dashboard h2,
+.scanner h2,
+.features h2,
+.eco h2 {
+font-size: 30px;
+margin-bottom: 15px;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 20px;
+margin-top: 30px;
+}
+
+.card {
+background: white;
+padding: 25px;
+border-radius: 15px;
+box-shadow: 0 5px 20px #183e2910;
+}
+
+.stats .card h3 {
+font-size: 32px;
+color: #248749;
+margin-bottom: 8px;
+}
+
+.card p {
+color: #68766b;
+}
+
+.scanner {
+background: #eaf4e5;
+}
+
+.scanner > p {
+color: #68766b;
+margin-bottom: 25px;
+}
+
+.upload-box {
+background: white;
+max-width: 650px;
+margin: 25px auto;
+padding: 30px;
+border: 2px dashed #8ebd91;
+border-radius: 15px;
+}
+
+.upload-box input {
+display: block;
+max-width: 100%;
+margin: 10px auto 20px;
+}
+
+#preview {
+display: none;
+max-width: 100%;
+max-height: 280px;
+object-fit: contain;
+margin: 20px auto;
+border-radius: 10px;
+}
+
+#result {
+display: none;
+max-width: 650px;
+margin: 20px auto;
+padding: 20px;
+background: white;
+border-radius: 12px;
+text-align: left;
+overflow-wrap: anywhere;
+}
+
+#result h3 {
+color: #248749;
+margin-bottom: 10px;
+}
+
+#result p {
+margin: 8px 0;
+}
+
+.features {
+background: #f5f8f2;
+}
+
+.feature-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 20px;
+margin-top: 30px;
+text-align: left;
+}
+
+.feature-grid h3 {
+margin-bottom: 12px;
+color: #248749;
+}
+
+.eco {
+background: #174c32;
+color: white;
+}
+
+.eco h3 {
+font-size: 35px;
+color: #a6ef85;
+margin-top: 20px;
+}
+
+footer {
+background: #123d2b;
+color: white;
+padding: 25px;
+text-align: center;
+}
+
+@media (max-width: 650px) {
+header {
+justify-content: center;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 6px;
+}
+
+.hero {
+    padding-top: 40px;
+}
+
+.stats,
+.feature-grid {
+    grid-template-columns: 1fr;
+}
+
+.upload-box {
+    padding: 20px;
+}
+
+}
+/* Waste Analysis History */
+.history-section {
+    padding: 55px 7%;
+    background: linear-gradient(135deg, #f5f8f2, #e5f2df);
+    text-align: center;
+}
+
+.history-section h2 {
+    color: #174c32;
+    font-size: clamp(25px, 4vw, 34px);
+    margin-bottom: 10px;
+}
+
+.history-section > p {
+    color: #68766b;
+    margin-bottom: 25px;
+}
+
+.history-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 750px;
+    margin: 25px auto;
+}
+
+.history-card {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid #e0edda;
+    box-shadow: 0 8px 25px rgba(24, 62, 41, 0.08);
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+.history-card h3 {
+    color: #248749;
+    margin-bottom: 8px;
+}
+
+.history-card p {
+    color: #536358;
+    margin: 7px 0;
+}
+
+#historyTotalScans,
+#historyTotalPoints {
+    font-size: 32px;
+    font-weight: bold;
+    color: #248749;
+}
+
+#historyList {
+    max-width: 750px;
+    margin: 25px auto;
+}
+
+#clearHistoryButton {
+    background: #174c32;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clearHistoryButton:hover {
+    background: #248749;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+    .history-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .history-section {
+        padding: 40px 5%;
+    }
+}
+/* Eco Warriors Leaderboard */
+.leaderboard {
+padding: 60px 7%;
+text-align: center;
+background: linear-gradient(135deg, #eaf4e5, #f8fbf5);
+}
+
+.leaderboard h2 {
+font-size: clamp(26px, 4vw, 36px);
+color: #174c32;
+margin-bottom: 10px;
+}
+
+.leaderboard > p {
+color: #68766b;
+margin-bottom: 30px;
+}
+
+.leaderboard-list {
+max-width: 750px;
+margin: 0 auto;
+}
+
+.leaderboard-card {
+display: flex;
+align-items: center;
+gap: 18px;
+background: white;
+padding: 22px;
+margin-bottom: 16px;
+border-radius: 15px;
+box-shadow: 0 6px 20px rgba(24, 62, 41, 0.08);
+border: 1px solid #e0edda;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.leaderboard-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(24, 62, 41, 0.14);
+}
+
+.rank {
+font-size: 23px;
+font-weight: bold;
+min-width: 50px;
+}
+
+.warrior-info {
+flex: 1;
+text-align: left;
+}
+
+.warrior-info h3 {
+color: #174c32;
+font-size: 18px;
+}
+
+.warrior-info p {
+color: #68766b;
+font-size: 14px;
+}
+
+.leaderboard-card > strong {
+color: #248749;
+white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+.leaderboard {
+padding: 40px 5%;
+}
+
+.leaderboard-card {
+    gap: 10px;
+    padding: 15px 10px;
+}
+
+.rank {
+    font-size: 19px;
+    min-width: 40px;
+}
+
+.warrior-info h3 {
+    font-size: 15px;
+}
+
+.leaderboard-card > strong {
+    font-size: 13px;
+}
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #f5f8f2;
+color: #20352a;
+line-height: 1.6;
+}
+
+header {
+background: #123d2b;
+color: white;
+padding: 20px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.logo {
+font-size: 26px;
+font-weight: bold;
+}
+
+.logo span {
+color: #9be477;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-size: 14px;
+}
+
+nav a:hover {
+color: #9be477;
+}
+
+.hero {
+min-height: 430px;
+padding: 65px 7%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 35px;
+flex-wrap: wrap;
+}
+
+.hero-content {
+flex: 1 1 320px;
+}
+
+.tag {
+display: inline-block;
+background: #dff4d4;
+color: #23653b;
+padding: 8px 15px;
+border-radius: 25px;
+margin-bottom: 18px;
+}
+
+.hero h1 {
+font-size: clamp(38px, 5vw, 58px);
+line-height: 1.15;
+margin-bottom: 20px;
+}
+
+.hero h1 span {
+color: #319451;
+}
+
+.hero-content > p:not(.tag) {
+color: #68766b;
+max-width: 480px;
+margin-bottom: 25px;
+}
+
+.button {
+display: inline-block;
+background: #248749;
+color: white;
+padding: 13px 22px;
+border: none;
+border-radius: 8px;
+text-decoration: none;
+font-size: 15px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.button:hover {
+background: #176334;
+transform: translateY(-2px);
+}
+
+.hero-art {
+flex: 1 1 260px;
+min-height: 260px;
+background: linear-gradient(135deg, #dff4d4, #b5e4ac);
+border-radius: 25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 25px;
+font-size: 75px;
+}
+
+.hero-art h2 {
+font-size: 20px;
+color: #245d36;
+margin-top: 15px;
+}
+
+.dashboard,
+.scanner,
+.features,
+.eco {
+padding: 55px 7%;
+text-align: center;
+}
+
+.dashboard h2,
+.scanner h2,
+.features h2,
+.eco h2 {
+font-size: 30px;
+margin-bottom: 15px;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 20px;
+margin-top: 30px;
+}
+
+.card {
+background: white;
+padding: 25px;
+border-radius: 15px;
+box-shadow: 0 5px 20px #183e2910;
+}
+
+.stats .card h3 {
+font-size: 32px;
+color: #248749;
+margin-bottom: 8px;
+}
+
+.card p {
+color: #68766b;
+}
+
+.scanner {
+background: #eaf4e5;
+}
+
+.scanner > p {
+color: #68766b;
+margin-bottom: 25px;
+}
+
+.upload-box {
+background: white;
+max-width: 650px;
+margin: 25px auto;
+padding: 30px;
+border: 2px dashed #8ebd91;
+border-radius: 15px;
+}
+
+.upload-box input {
+display: block;
+max-width: 100%;
+margin: 10px auto 20px;
+}
+
+#preview {
+display: none;
+max-width: 100%;
+max-height: 280px;
+object-fit: contain;
+margin: 20px auto;
+border-radius: 10px;
+}
+
+#result {
+display: none;
+max-width: 650px;
+margin: 20px auto;
+padding: 20px;
+background: white;
+border-radius: 12px;
+text-align: left;
+overflow-wrap: anywhere;
+}
+
+#result h3 {
+color: #248749;
+margin-bottom: 10px;
+}
+
+#result p {
+margin: 8px 0;
+}
+
+.features {
+background: #f5f8f2;
+}
+
+.feature-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 20px;
+margin-top: 30px;
+text-align: left;
+}
+
+.feature-grid h3 {
+margin-bottom: 12px;
+color: #248749;
+}
+
+.eco {
+background: #174c32;
+color: white;
+}
+
+.eco h3 {
+font-size: 35px;
+color: #a6ef85;
+margin-top: 20px;
+}
+
+footer {
+background: #123d2b;
+color: white;
+padding: 25px;
+text-align: center;
+}
+
+@media (max-width: 650px) {
+header {
+justify-content: center;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 6px;
+}
+
+.hero {
+    padding-top: 40px;
+}
+
+.stats,
+.feature-grid {
+    grid-template-columns: 1fr;
+}
+
+.upload-box {
+    padding: 20px;
+}
+
+}
+/* Waste Analysis History */
+.history-section {
+    padding: 55px 7%;
+    background: linear-gradient(135deg, #f5f8f2, #e5f2df);
+    text-align: center;
+}
+
+.history-section h2 {
+    color: #174c32;
+    font-size: clamp(25px, 4vw, 34px);
+    margin-bottom: 10px;
+}
+
+.history-section > p {
+    color: #68766b;
+    margin-bottom: 25px;
+}
+
+.history-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 750px;
+    margin: 25px auto;
+}
+
+.history-card {
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid #e0edda;
+    box-shadow: 0 8px 25px rgba(24, 62, 41, 0.08);
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+.history-card h3 {
+    color: #248749;
+    margin-bottom: 8px;
+}
+
+.history-card p {
+    color: #536358;
+    margin: 7px 0;
+}
+
+#historyTotalScans,
+#historyTotalPoints {
+    font-size: 32px;
+    font-weight: bold;
+    color: #248749;
+}
+
+#historyList {
+    max-width: 750px;
+    margin: 25px auto;
+}
+
+#clearHistoryButton {
+    background: #174c32;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clearHistoryButton:hover {
+    background: #248749;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+    .history-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .history-section {
+        padding: 40px 5%;
+    }
+}
+/* Eco Warriors Leaderboard */
+.leaderboard {
+padding: 60px 7%;
+text-align: center;
+background: linear-gradient(135deg, #eaf4e5, #f8fbf5);
+}
+
+.leaderboard h2 {
+font-size: clamp(26px, 4vw, 36px);
+color: #174c32;
+margin-bottom: 10px;
+}
+
+.leaderboard > p {
+color: #68766b;
+margin-bottom: 30px;
+}
+
+.leaderboard-list {
+max-width: 750px;
+margin: 0 auto;
+}
+
+.leaderboard-card {
+display: flex;
+align-items: center;
+gap: 18px;
+background: white;
+padding: 22px;
+margin-bottom: 16px;
+border-radius: 15px;
+box-shadow: 0 6px 20px rgba(24, 62, 41, 0.08);
+border: 1px solid #e0edda;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.leaderboard-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(24, 62, 41, 0.14);
+}
+
+.rank {
+font-size: 23px;
+font-weight: bold;
+min-width: 50px;
+}
+
+.warrior-info {
+flex: 1;
+text-align: left;
+}
+
+.warrior-info h3 {
+color: #174c32;
+font-size: 18px;
+}
+
+.warrior-info p {
+color: #68766b;
+font-size: 14px;
+}
+
+.leaderboard-card > strong {
+color: #248749;
+white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+.leaderboard {
+padding: 40px 5%;
+}
+
+.leaderboard-card {
+    gap: 10px;
+    padding: 15px 10px;
+}
+
+.rank {
+    font-size: 19px;
+    min-width: 40px;
+}
+
+.warrior-info h3 {
+    font-size: 15px;
+}
+
+.leaderboard-card > strong {
+    font-size: 13px;
+}
+
+} 
+/* ===== Login & Registration Premium Design ===== */
+
+.auth-section {
+    padding: 60px 7%;
+    background: linear-gradient(135deg, #e5f2df, #f7fbf5);
+    text-align: center;
+}
+
+.auth-section > h2 {
+    font-size: 32px;
+    color: #174c32;
+    margin-bottom: 10px;
+}
+
+.auth-section > p {
+    color: #68766b;
+    margin-bottom: 25px;
+}
+
+.auth-section form {
+    background: white;
+    max-width: 420px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(24, 62, 41, 0.10);
+    text-align: left;
+}
+
+.auth-section form h3 {
+    color: #174c32;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.auth-section form input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 14px 0;
+    border: 1px solid #d5e3d2;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.auth-section form input:focus {
+    border-color: #248749;
+    outline: none;
+}
+
+.auth-section form button {
+    width: 100%;
+    padding: 13px;
+    background: #248749;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-section form button:hover {
+    background: #176334;
+}
+
+.auth-section hr {
+    max-width: 420px;
+    margin: 30px auto;
+    border: 0;
+    border-top: 1px solid #d5e3d2;
+}
+
+#auth-message {
+    font-weight: bold;
+    margin: 15px auto;
+}
+
+#logout-button {
+    padding: 11px 25px;
+    background: #174c32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#account-points {
+    color: #248749;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+    .auth-section {
+        padding: 40px 5%;
+    }
+
+    .auth-section form {
+        padding: 22px;
+    }
+}
+/* ===== Premium Eco Warriors Leaderboard ===== */
+
+.leaderboard {
+    position: relative;
+}
+
+.leaderboard-card:first-child {
+    border: 2px solid #e8c75a;
+    background: linear-gradient(135deg, #fffdf2, #ffffff);
+}
+
+.leaderboard-card:nth-child(2) {
+    border: 2px solid #c0c0c0;
+    background: linear-gradient(135deg, #f5f5f5, #ffffff);
+}
+
+.leaderboard-card:nth-child(3) {
+    border: 2px solid #cd9565;
+    background: linear-gradient(135deg, #fff5eb, #ffffff);
+}
+
+.rank {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf4e5;
+    border-radius: 50%;
+}
+
+.leaderboard-card:first-child .rank {
+    background: #fff0b8;
+}
+
+.leaderboard-card:nth-child(2) .rank {
+    background: #e5e5e5;
+}
+
+.leaderboard-card:nth-child(3) .rank {
+    background: #f5dfca;
+}
+
+.leaderboard-card strong {
+    font-size: 15px;
+}
+
+.leaderboard-card:hover {
+    transform: translateY(-5px) scale(1.01);
+}
+
+#leaderboard-list > p {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+}
